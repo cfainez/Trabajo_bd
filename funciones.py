@@ -12,7 +12,9 @@ productos = db_merciotech["productos"]
 pedidos = db_merciotech["pedidos"]
 clientes = db_merciotech["clientes"]
 
-
+# funciones para autenticacion, gestion de usuarios, busqueda de productos y manejo de errores relacionados con la conexion a MongoDB.
+# Estas funciones se utilizan en los menus para permitir al usuario interactuar con la base de datos de manera segura y eficiente,
+# mostrando los datos de forma legible y manejando posibles errores de conexion.
 def inicializar_base_datos():
     """Valida conexion y configura indice unico para correos."""
     cliente_mongo.admin.command("ping")

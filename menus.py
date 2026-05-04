@@ -1,5 +1,6 @@
 import json
 
+# configuracion de paginacion y orden de columnas para mostrar los documentos en las tablas del menu de colecciones
 TAMANO_PAGINA = 10
 PRIORIDAD_COLUMNAS = [
     "_id",
@@ -14,7 +15,9 @@ PRIORIDAD_COLUMNAS = [
     "fecha",
     "total",
 ]
-
+# este modulo contiene las funciones relacionadas con los menus de la aplicacion, incluyendo la visualizacion de colecciones,
+# busqueda de productos y gestion de usuarios. Se encarga de mostrar los datos de manera legible utilizando tablas y paginacion,
+# y permite al usuario navegar por las diferentes opciones del sistema.
 from funciones import (
     autenticar_usuario,
     buscar_productos_por_categoria,
@@ -30,7 +33,9 @@ from funciones import (
     registrar_usuario,
 )
 
-
+# esta funcion se encarga de convertir el valor de cada celda en texto, limitando su longitud para mantener la tabla legible.
+# Si el valor es un diccionario o una lista, se convierte a formato JSON para mostrarlo de manera mas clara.
+# Si el texto excede el maximo permitido, se trunca y se agrega "..." al final.
 def _texto_celda(valor, max_largo=28):
     if isinstance(valor, (dict, list, tuple)):
         texto = json.dumps(valor, ensure_ascii=True)
@@ -41,7 +46,8 @@ def _texto_celda(valor, max_largo=28):
         return texto[: max_largo - 3] + "..."
     return texto
 
-
+# esta funcion calcula el ancho de cada columna basado en el nombre de la columna y el contenido de las celdas,
+#  asegurando que la tabla se vea ordenada y legible. Se utiliza para ajustar el formato de la tabla al mostrar los documentos en el menu de colecciones.
 def _ancho_columnas(columnas, filas):
     anchos = {col: len(col) for col in columnas}
     for fila in filas:
@@ -49,14 +55,18 @@ def _ancho_columnas(columnas, filas):
             anchos[col] = max(anchos[col], len(fila.get(col, "")))
     return anchos
 
-
+# esta funcion se encarga de ordenar las columnas de los documentos segun una prioridad definida en PRIORIDAD_COLUMNAS,
+# colocando primero las columnas mas relevantes y luego el resto en orden alfabetico. Esto ayuda a que la tabla sea mas
+# legible y facilite la identificacion de los campos importantes.
 def _ordenar_columnas(documentos):
     claves = {clave for doc in documentos for clave in doc.keys()}
     primeras = [col for col in PRIORIDAD_COLUMNAS if col in claves]
     restantes = sorted(claves - set(primeras))
     return primeras + restantes
 
-
+# en esta funcion se encarga de imprimir una tabla con los documentos y las columnas especificadas,
+# formateando el texto de cada celda para mantener la tabla legible y calculando el ancho de cada
+# columna para una presentación ordenada. Se utiliza para mostrar los resultados de las consultas en el menu de colecciones.
 def _imprimir_tabla(documentos, columnas):
     if not columnas:
         print("No hay campos para mostrar")
@@ -81,7 +91,9 @@ def _imprimir_tabla(documentos, columnas):
         print(linea)
     print(separador)
 
-
+# en esta funcion muestra los documentos de una coleccion con paginacion, 
+# ordenando las columnas segun la prioridad definida y limitando el texto 
+# de cada celda para mantener la tabla legible. Permite al usuario navegar entre paginas si hay muchos documentos.
 def mostrar_documentos(nombre_coleccion, documentos):
     print(f"\n=== {nombre_coleccion.upper()} ===")
     if not documentos:

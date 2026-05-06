@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "69f67ab59aa55650f05e29de"
+  },
+  "nombre": "admin@comerciotech.com",
+  "correo": "admin@comerciotech.com",
+  "clave": "$2b$12$jhDhiRuhLukhABh1TbPIQ.rVffwgNTE651CU0dL4lKvHwhMKC.HfO"
+},
+{
+  "_id": {
+    "$oid": "69f8e62ac9471c9efe8bf649"
+  },
+  "nombre": "Cristian",
+  "correo": "cristian@inacap.com",
+  "clave": "$2b$12$wAP0ibY3yt5IuQ.JdfnIsuu7dV7njtArnqI.YTBuSbHCzF74RlxVa"
+}]

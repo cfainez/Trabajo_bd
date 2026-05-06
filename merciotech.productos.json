@@ -1,0 +1,175 @@
+db.productos.insertMany([{
+  "_id": 21,
+  "nombre": "Laptop HP",
+  "precio": 650000,
+  "categoria": "Computacion",
+  "descripcion": "8GB RAM SSD"
+},
+{
+  "_id": 28,
+  "nombre": "Laptop Dell",
+  "precio": 720000,
+  "categoria": "Computacion",
+  "descripcion": "16GB RAM"
+},
+{
+  "_id": 35,
+  "nombre": "Teclado Mecanico",
+  "precio": 45000,
+  "categoria": "Computacion",
+  "descripcion": "RGB"
+},
+{
+  "_id": 42,
+  "nombre": "Mouse Gamer",
+  "precio": 25000,
+  "categoria": "Computacion",
+  "descripcion": "Alta precision"
+},
+{
+  "_id": 50,
+  "nombre": "Monitor 24",
+  "precio": 120000,
+  "categoria": "Computacion",
+  "descripcion": "Full HD"
+},
+{
+  "_id": 58,
+  "nombre": "Monitor 27",
+  "precio": 180000,
+  "categoria": "Computacion",
+  "descripcion": "2K"
+},
+{
+  "_id": 65,
+  "nombre": "SSD 1TB",
+  "precio": 90000,
+  "categoria": "Computacion",
+  "descripcion": "Rapido"
+},
+{
+  "_id": 72,
+  "nombre": "HDD 2TB",
+  "precio": 70000,
+  "categoria": "Computacion",
+  "descripcion": "Almacenamiento"
+},
+{
+  "_id": 80,
+  "nombre": "GPU RTX",
+  "precio": 500000,
+  "categoria": "Computacion",
+  "descripcion": "Gaming"
+},
+{
+  "_id": 88,
+  "nombre": "Placa Madre",
+  "precio": 150000,
+  "categoria": "Computacion",
+  "descripcion": "Intel"
+},
+{
+  "_id": 95,
+  "nombre": "Procesador i5",
+  "precio": 200000,
+  "categoria": "Computacion",
+  "descripcion": "10 gen"
+},
+{
+  "_id": 102,
+  "nombre": "Procesador i7",
+  "precio": 350000,
+  "categoria": "Computacion",
+  "descripcion": "Alta gama"
+},
+{
+  "_id": 110,
+  "nombre": "RAM 16GB",
+  "precio": 80000,
+  "categoria": "Computacion",
+  "descripcion": "DDR4"
+},
+{
+  "_id": 118,
+  "nombre": "RAM 32GB",
+  "precio": 150000,
+  "categoria": "Computacion",
+  "descripcion": "Gaming"
+},
+{
+  "_id": 125,
+  "nombre": "Gabinete",
+  "precio": 60000,
+  "categoria": "Computacion",
+  "descripcion": "RGB"
+},
+{
+  "_id": 132,
+  "nombre": "Fuente 750W",
+  "precio": 90000,
+  "categoria": "Computacion",
+  "descripcion": "Certificada"
+},
+{
+  "_id": 140,
+  "nombre": "Router WiFi",
+  "precio": 110000,
+  "categoria": "Computacion",
+  "descripcion": "Rapido"
+},
+{
+  "_id": 148,
+  "nombre": "Audifonos",
+  "precio": 50000,
+  "categoria": "Computacion",
+  "descripcion": "Gaming"
+},
+{
+  "_id": 155,
+  "nombre": "Webcam",
+  "precio": 30000,
+  "categoria": "Computacion",
+  "descripcion": "HD"
+},
+{
+  "_id": 162,
+  "nombre": "Microfono",
+  "precio": 45000,
+  "categoria": "Computacion",
+  "descripcion": "USB"
+},
+{
+  "_id": 170,
+  "nombre": "Tablet",
+  "precio": 250000,
+  "categoria": "Computacion",
+  "descripcion": "Android"
+},
+{
+  "_id": 178,
+  "nombre": "iPad",
+  "precio": 400000,
+  "categoria": "Computacion",
+  "descripcion": "Apple"
+},
+{
+  "_id": 185,
+  "nombre": "Smartphone",
+  "precio": 220000,
+  "categoria": "Computacion",
+  "descripcion": "128GB"
+},
+{
+  "_id": 192,
+  "nombre": "Smartwatch",
+  "precio": 120000,
+  "categoria": "Computacion",
+  "descripcion": "Deportivo"
+},
+{
+  "_id": 200,
+  "nombre": "Impresora",
+  "precio": 90000,
+  "categoria": "Computacion",
+  "descripcion": "Multifuncion"
+}])

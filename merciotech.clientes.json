@@ -1,0 +1,105 @@
+db.clientes.insertMany([{
+  "_id": 11,
+  "nombre": "Juan",
+  "apellido": "Perez",
+  "correo": "juan@gmail.com",
+  "telefono": "+56911111101"
+},
+{
+  "_id": 18,
+  "nombre": "Maria",
+  "apellido": "Gonzalez",
+  "correo": "maria@hotmail.com",
+  "telefono": "+56911111102"
+},
+{
+  "_id": 25,
+  "nombre": "Pedro",
+  "apellido": "Rojas",
+  "correo": "pedro@inacap.cl",
+  "telefono": "+56911111103"
+},
+{
+  "_id": 32,
+  "nombre": "Ana",
+  "apellido": "Muñoz",
+  "correo": "ana@gmail.com",
+  "telefono": "+56911111104"
+},
+{
+  "_id": 40,
+  "nombre": "Luis",
+  "apellido": "Soto",
+  "correo": "luis@hotmail.com",
+  "telefono": "+56911111105"
+},
+{
+  "_id": 48,
+  "nombre": "Carla",
+  "apellido": "Vera",
+  "correo": "carla@inacap.cl",
+  "telefono": "+56911111106"
+},
+{
+  "_id": 55,
+  "nombre": "Jorge",
+  "apellido": "Castro",
+  "correo": "jorge@gmail.com",
+  "telefono": "+56911111107"
+},
+{
+  "_id": 63,
+  "nombre": "Fernanda",
+  "apellido": "Silva",
+  "correo": "fernanda@hotmail.com",
+  "telefono": "+56911111108"
+},
+{
+  "_id": 70,
+  "nombre": "Diego",
+  "apellido": "Torres",
+  "correo": "diego@inacap.cl",
+  "telefono": "+56911111109"
+},
+{
+  "_id": 78,
+  "nombre": "Valentina",
+  "apellido": "Flores",
+  "correo": "valentina@gmail.com",
+  "telefono": "+56911111110"
+},
+{
+  "_id": 85,
+  "nombre": "Pablo",
+  "apellido": "Reyes",
+  "correo": "pablo@hotmail.com",
+  "telefono": "+56911111111"
+},
+{
+  "_id": 93,
+  "nombre": "Camila",
+  "apellido": "Morales",
+  "correo": "camila@inacap.cl",
+  "telefono": "+56911111112"
+},
+{
+  "_id": 100,
+  "nombre": "Felipe",
+  "apellido": "Ortiz",
+  "correo": "felipe@gmail.com",
+  "telefono": "+56911111113"
+},
+{
+  "_id": 120,
+  "nombre": "Daniela",
+  "apellido": "Bravo",
+  "correo": "daniela@hotmail.com",
+  "telefono": "+56911111114"
+},
+{
+  "_id": 140,
+  "nombre": "Andres",
+  "apellido": "Campos",
+  "correo": "andres@inacap.cl",
+  "telefono": "+56911111115"
+}])

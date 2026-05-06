@@ -1,0 +1,315 @@
+db.pedidos.insertMany([{
+  "_id": 1,
+  "fecha": {
+    "$date": "2024-03-15T13:30:00.000Z"
+  },
+  "id_cliente": 11,
+  "estado": "pendiente",
+  "detalle": [
+    {
+      "id_producto": 21,
+      "cantidad": 1,
+      "precio_unitario": 650000
+    },
+    {
+      "id_producto": 35,
+      "cantidad": 2,
+      "precio_unitario": 45000
+    }
+  ]
+},
+{
+  "_id": 7,
+  "fecha": {
+    "$date": "2025-07-22T18:15:00.000Z"
+  },
+  "id_cliente": 11,
+  "estado": "completado",
+  "detalle": [
+    {
+      "id_producto": 50,
+      "cantidad": 1,
+      "precio_unitario": 120000
+    }
+  ]
+},
+{
+  "_id": 15,
+  "fecha": {
+    "$date": "2026-01-10T12:45:00.000Z"
+  },
+  "id_cliente": 18,
+  "estado": "pendiente",
+  "detalle": [
+    {
+      "id_producto": 28,
+      "cantidad": 1,
+      "precio_unitario": 720000
+    },
+    {
+      "id_producto": 42,
+      "cantidad": 1,
+      "precio_unitario": 25000
+    }
+  ]
+},
+{
+  "_id": 22,
+  "fecha": {
+    "$date": "2024-09-05T22:20:00.000Z"
+  },
+  "id_cliente": 18,
+  "estado": "cancelado",
+  "detalle": [
+    {
+      "id_producto": 65,
+      "cantidad": 2,
+      "precio_unitario": 90000
+    }
+  ]
+},
+{
+  "_id": 30,
+  "fecha": {
+    "$date": "2025-11-18T15:00:00.000Z"
+  },
+  "id_cliente": 25,
+  "estado": "completado",
+  "detalle": [
+    {
+      "id_producto": 72,
+      "cantidad": 1,
+      "precio_unitario": 70000
+    },
+    {
+      "id_producto": 80,
+      "cantidad": 1,
+      "precio_unitario": 500000
+    }
+  ]
+},
+{
+  "_id": 38,
+  "fecha": {
+    "$date": "2026-02-02T19:10:00.000Z"
+  },
+  "id_cliente": 25,
+  "estado": "pendiente",
+  "detalle": [
+    {
+      "id_producto": 88,
+      "cantidad": 1,
+      "precio_unitario": 150000
+    }
+  ]
+},
+{
+  "_id": 45,
+  "fecha": {
+    "$date": "2024-06-12T15:25:00.000Z"
+  },
+  "id_cliente": 32,
+  "estado": "pendiente",
+  "detalle": [
+    {
+      "id_producto": 95,
+      "cantidad": 1,
+      "precio_unitario": 200000
+    }
+  ]
+},
+{
+  "_id": 53,
+  "fecha": {
+    "$date": "2025-08-30T17:40:00.000Z"
+  },
+  "id_cliente": 32,
+  "estado": "completado",
+  "detalle": [
+    {
+      "id_producto": 102,
+      "cantidad": 1,
+      "precio_unitario": 350000
+    }
+  ]
+},
+{
+  "_id": 60,
+  "fecha": {
+    "$date": "2024-04-14T13:10:00.000Z"
+  },
+  "id_cliente": 40,
+  "estado": "pendiente",
+  "detalle": [
+    {
+      "id_producto": 110,
+      "cantidad": 2,
+      "precio_unitario": 80000
+    }
+  ]
+},
+{
+  "_id": 68,
+  "fecha": {
+    "$date": "2025-12-09T22:30:00.000Z"
+  },
+  "id_cliente": 40,
+  "estado": "completado",
+  "detalle": [
+    {
+      "id_producto": 118,
+      "cantidad": 1,
+      "precio_unitario": 150000
+    }
+  ]
+},
+{
+  "_id": 75,
+  "fecha": {
+    "$date": "2026-03-21T11:50:00.000Z"
+  },
+  "id_cliente": 48,
+  "estado": "pendiente",
+  "detalle": [
+    {
+      "id_producto": 125,
+      "cantidad": 1,
+      "precio_unitario": 60000
+    }
+  ]
+},
+{
+  "_id": 82,
+  "fecha": {
+    "$date": "2024-07-07T21:00:00.000Z"
+  },
+  "id_cliente": 55,
+  "estado": "completado",
+  "detalle": [
+    {
+      "id_producto": 132,
+      "cantidad": 1,
+      "precio_unitario": 90000
+    }
+  ]
+},
+{
+  "_id": 90,
+  "fecha": {
+    "$date": "2025-10-11T18:15:00.000Z"
+  },
+  "id_cliente": 63,
+  "estado": "pendiente",
+  "detalle": [
+    {
+      "id_producto": 140,
+      "cantidad": 1,
+      "precio_unitario": 110000
+    }
+  ]
+},
+{
+  "_id": 100,
+  "fecha": {
+    "$date": "2026-01-19T23:05:00.000Z"
+  },
+  "id_cliente": 70,
+  "estado": "completado",
+  "detalle": [
+    {
+      "id_producto": 148,
+      "cantidad": 2,
+      "precio_unitario": 50000
+    }
+  ]
+},
+{
+  "_id": 120,
+  "fecha": {
+    "$date": "2024-05-25T14:00:00.000Z"
+  },
+  "id_cliente": 78,
+  "estado": "pendiente",
+  "detalle": [
+    {
+      "id_producto": 155,
+      "cantidad": 1,
+      "precio_unitario": 30000
+    }
+  ]
+},
+{
+  "_id": 135,
+  "fecha": {
+    "$date": "2025-09-03T18:45:00.000Z"
+  },
+  "id_cliente": 85,
+  "estado": "completado",
+  "detalle": [
+    {
+      "id_producto": 162,
+      "cantidad": 1,
+      "precio_unitario": 45000
+    }
+  ]
+},
+{
+  "_id": 150,
+  "fecha": {
+    "$date": "2026-02-17T14:35:00.000Z"
+  },
+  "id_cliente": 93,
+  "estado": "pendiente",
+  "detalle": [
+    {
+      "id_producto": 170,
+      "cantidad": 1,
+      "precio_unitario": 250000
+    }
+  ]
+},
+{
+  "_id": 165,
+  "fecha": {
+    "$date": "2024-06-29T20:20:00.000Z"
+  },
+  "id_cliente": 100,
+  "estado": "completado",
+  "detalle": [
+    {
+      "id_producto": 178,
+      "cantidad": 1,
+      "precio_unitario": 400000
+    }
+  ]
+},
+{
+  "_id": 180,
+  "fecha": {
+    "$date": "2025-11-08T12:55:00.000Z"
+  },
+  "id_cliente": 120,
+  "estado": "pendiente",
+  "detalle": [
+    {
+      "id_producto": 185,
+      "cantidad": 1,
+      "precio_unitario": 220000
+    }
+  ]
+},
+{
+  "_id": 195,
+  "fecha": {
+    "$date": "2026-03-13T21:10:00.000Z"
+  },
+  "id_cliente": 140,
+  "estado": "completado",
+  "detalle": [
+    {
+      "id_producto": 200,
+      "cantidad": 1,
+      "precio_unitario": 90000
+    }
+  ]
+}])

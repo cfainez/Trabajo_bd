@@ -1,4 +1,4 @@
-from conexion import ADMIN_CORREO, es_error_mongo, inicializar_base_datos, mostrar_error_conexion, pedidos, usuarios
+from conexion import ADMIN_CORREO, es_error_mongo, inicializar_base_datos, mostrar_error_conexion, pedidos, usuarios, clientes
 from funciones import (
     autenticar_usuario,
     buscar_productos_por_categoria,
@@ -151,7 +151,15 @@ def _eliminar_producto_carrito(carrito):
 
 
 def _mis_pedidos(usuario_actual):
-    documentos = list(pedidos.find({"cliente": usuario_actual["correo"]}))
+    # Buscar el cliente en la coleccion de clientes
+    cliente = clientes.find_one({"correo": usuario_actual["correo"]})
+    
+    if not cliente:
+        print("No se encontro informacion del cliente. Contacte al administrador.\n")
+        return
+    
+    # Buscar pedidos por ID de cliente
+    documentos = list(pedidos.find({"id_cliente": str(cliente["_id"])}))
     mostrar_documentos("mis pedidos", documentos)
 
 

@@ -243,13 +243,22 @@ def _buscar_pedidos_por_cliente():
     
     if opcion == "1":
         correo = pedir_no_vacio("Ingrese correo del cliente: ").lower()
-        documentos = list(pedidos.find({"cliente": correo}))
+        cliente = clientes.find_one({"correo": correo})
+        if not cliente:
+            print(f"No se encontro cliente con ese correo\n")
+            return
+        documentos = list(pedidos.find({"id_cliente": cliente["_id"]}))
         if documentos:
             mostrar_documentos(f"pedidos del cliente {correo}", documentos)
         else:
             print(f"No hay pedidos para el cliente: {correo}\n")
     elif opcion == "2":
-        id_cliente = pedir_no_vacio("Ingrese ID del cliente: ")
+        id_cliente_str = pedir_no_vacio("Ingrese ID del cliente: ")
+        try:
+            id_cliente = int(id_cliente_str)
+        except ValueError:
+            print("ID de cliente invalido (debe ser un numero)\n")
+            return
         documentos = list(pedidos.find({"id_cliente": id_cliente}))
         if documentos:
             mostrar_documentos(f"pedidos del cliente ID: {id_cliente}", documentos)

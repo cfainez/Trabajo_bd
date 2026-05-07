@@ -158,8 +158,8 @@ def _mis_pedidos(usuario_actual):
         print("No se encontro informacion del cliente. Contacte al administrador.\n")
         return
     
-    # Buscar pedidos por ID de cliente
-    documentos = list(pedidos.find({"id_cliente": str(cliente["_id"])}))
+    # Buscar pedidos por ID de cliente (como número, no string)
+    documentos = list(pedidos.find({"id_cliente": cliente["_id"]}))
     mostrar_documentos("mis pedidos", documentos)
 
 

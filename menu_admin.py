@@ -235,6 +235,30 @@ def _visualizar_pedidos_por_estado():
     mostrar_documentos(f"pedidos {estado}", documentos)
 
 
+def _buscar_pedidos_por_cliente():
+    print("\n=== BUSCAR PEDIDOS POR CLIENTE ===")
+    print("1. Buscar por correo de cliente")
+    print("2. Buscar por ID de cliente")
+    opcion = pedir_no_vacio("Seleccione criterio: ")
+    
+    if opcion == "1":
+        correo = pedir_no_vacio("Ingrese correo del cliente: ").lower()
+        documentos = list(pedidos.find({"cliente": correo}))
+        if documentos:
+            mostrar_documentos(f"pedidos del cliente {correo}", documentos)
+        else:
+            print(f"No hay pedidos para el cliente: {correo}\n")
+    elif opcion == "2":
+        id_cliente = pedir_no_vacio("Ingrese ID del cliente: ")
+        documentos = list(pedidos.find({"id_cliente": id_cliente}))
+        if documentos:
+            mostrar_documentos(f"pedidos del cliente ID: {id_cliente}", documentos)
+        else:
+            print(f"No hay pedidos para el ID de cliente: {id_cliente}\n")
+    else:
+        print("Opcion invalida\n")
+
+
 def menu_super_admin(usuario_actual):
     while True:
         print("===== MENU SUPER ADMIN =====")
@@ -246,7 +270,8 @@ def menu_super_admin(usuario_actual):
         print("5. Reporte de estado de pedidos")
         print("6. Administrar usuarios")
         print("7. Visualizar pedidos por estado")
-        print("8. Cerrar sesion")
+        print("8. Buscar pedidos por cliente")
+        print("9. Cerrar sesion")
 
         opcion = input("Seleccione: ").strip()
 
@@ -313,6 +338,8 @@ def menu_super_admin(usuario_actual):
         elif opcion == "7":
             _visualizar_pedidos_por_estado()
         elif opcion == "8":
+            _buscar_pedidos_por_cliente()
+        elif opcion == "9":
             print("Sesion de super admin cerrada\n")
             return
         else:

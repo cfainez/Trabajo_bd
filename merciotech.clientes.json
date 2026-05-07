@@ -1,4 +1,4 @@
-db.clientes.insertMany([{
+[{
   "_id": 11,
   "nombre": "Juan",
   "apellido": "Perez",
@@ -102,4 +102,4 @@ db.clientes.insertMany([{
   "apellido": "Campos",
   "correo": "andres@inacap.cl",
   "telefono": "+56911111115"
-}])
+}]

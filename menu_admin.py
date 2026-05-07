@@ -8,6 +8,7 @@ from funciones import (
     pedir_clave,
     pedir_no_vacio,
 )
+from backup import menu_backup
 
 
 def _seleccionar_por_indice(documentos, mensaje):
@@ -245,7 +246,7 @@ def _buscar_pedidos_por_cliente():
         correo = pedir_no_vacio("Ingrese correo del cliente: ").lower()
         cliente = clientes.find_one({"correo": correo})
         if not cliente:
-            print(f"No se encontro cliente con ese correo\n")
+            print("No se encontro cliente con ese correo\n")
             return
         documentos = list(pedidos.find({"id_cliente": cliente["_id"]}))
         if documentos:
@@ -270,7 +271,9 @@ def _buscar_pedidos_por_cliente():
 
 def menu_super_admin(usuario_actual):
     while True:
-        print("===== MENU SUPER ADMIN =====")
+        print("=============================\n")
+        print("===== MENU SUPER ADMIN =====\n")
+        print("==============================\n")
         print(f"Sesion actual: {usuario_actual['nombre']} ({usuario_actual['correo']})")
         print("1. Productos")
         print("2. Clientes")
@@ -280,7 +283,8 @@ def menu_super_admin(usuario_actual):
         print("6. Administrar usuarios")
         print("7. Visualizar pedidos por estado")
         print("8. Buscar pedidos por cliente")
-        print("9. Cerrar sesion")
+        print("9. Backup de base de datos")
+        print("10. Cerrar sesion")
 
         opcion = input("Seleccione: ").strip()
 
@@ -349,6 +353,8 @@ def menu_super_admin(usuario_actual):
         elif opcion == "8":
             _buscar_pedidos_por_cliente()
         elif opcion == "9":
+            menu_backup()
+        elif opcion == "10":
             print("Sesion de super admin cerrada\n")
             return
         else:

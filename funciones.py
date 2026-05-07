@@ -245,7 +245,22 @@ def mostrar_documentos(nombre_coleccion, documentos):
 
     print()
 
+def _crear_copia_seguridad():
+    print("\n=== CREAR COPIA DE SEGURIDAD ===")
+    try:
+        datos = {
+            "usuarios": obtener_documentos(usuarios),
+            "productos": obtener_documentos(productos),
+            "pedidos": obtener_documentos(pedidos),
+            "clientes": obtener_documentos(clientes)
+        }
+        with open("copia_seguridad.json", "w", encoding="utf-8") as f:
+            json.dump(datos, f, ensure_ascii=False, indent=4)
+        print("Copia de seguridad creada exitosamente como 'copia_seguridad.json'\n")
+    except Exception as e:
+        print(f"Error al crear la copia de seguridad: {e}\n")
 
+        
 def main():
     from menu_usuario import main as main_menu
 

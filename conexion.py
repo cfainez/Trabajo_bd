@@ -2,7 +2,7 @@ from pymongo import MongoClient
 from pymongo.errors import PyMongoError
 
 CONEXION = "mongodb+srv://administrador:admin12345@micluster.ckfwull.mongodb.net/?appName=micluster"
-ADMIN_CORREO = "admin@comerciotech.com"
+ADMIN_CORREO = "test@gmail.com"
 
 cliente_mongo = MongoClient(CONEXION, serverSelectionTimeoutMS=5000)
 db_merciotech = cliente_mongo["merciotech"]
